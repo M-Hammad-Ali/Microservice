@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: posts-depl
-sepc:
+spec:
   replicas: 1
   selector: 
     matchLabels:
@@ -15,3 +15,4 @@ sepc:
       containers:
         - name: posts
           image: hammadali/posts:0.0.1
+          imagePullPolicy: IfNotPresent
